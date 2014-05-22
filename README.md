@@ -1,6 +1,6 @@
-## This is 'Programming Assignment 2: Lexical Scoping' for the Coursera R Programming course.
+## This is 'Programming Assignment 2:Lexical Scoping' for the Coursera R Programming course.
 
-The assignment was write a pair of functions that cache the inverse of a matrix, using the makevector and the cachemean functions designed to cache the mean of a vector as examples.
+The assignment was write a pair of functions that cache the inverse of a matrix, using the makevector and the cachemean functions designed to cache the mean of a vector as examples(see 'ProgrammingAssignment2Instructions.md').
 
 The task was to write the following functions:
 
