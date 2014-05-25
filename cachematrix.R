@@ -1,7 +1,7 @@
 ## Caching the inverse of a matrix
 
 ## Below are two functions that are used to create a special
-## object that stores a matrix and caches its inverse. 
+## object that stores a matrix and that caches its inverse. 
 ## These functions make use of the <<- operator to assign a
 ## value to an object in an environment that is different from
 ## the current environment.
