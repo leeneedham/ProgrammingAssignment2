@@ -7,12 +7,10 @@
 ## the current environment.
 
 ## The first function 'makeCacheMatrix' creates a special
-## "matrix" object that can cache its inverse, which is
-## computed with the 'solve' function (i.e. `solve(x)` returns
-## the inverse of a square invertible matrix 'x').
+## "matrix" object that can cache its inverse.
 
-## The `makeCacheMatrix` function creates a special "matrix", 
-## which is a list containing a function to
+## The special "matrix" object created by the `makeCacheMatrix` 
+## function is a list containing a function to
 ## 1.  set the values of the matrix
 ## 2.  get the values of the matrix
 ## 3.  set the values of the inverse matrix
@@ -33,13 +31,16 @@ makeCacheMatrix <- function(x = matrix(nrow = 0, ncol = 0)) {
          getInverse = getInverse)  
 }
 
-## The second function 'cacheInverse' calculates the inverse of
+## The second function 'cacheInverse' computes the inverse of
 ## the special "matrix" created with the above function
-## 'makeCacheMatrix'. However, it first checks to see if the
-## inverse has already been calculated. If so, it get's the
-## inverse from the cache and skips the computation. Otherwise,
-## it calculates the inverse of the matrix and sets the values
-## of the inverse in the cache via the 'setInverse' function.
+## 'makeCacheMatrix'. The inverse is computed with the 'solve' 
+## function (i.e. `solve(x)` returns the inverse of a square 
+## invertible matrix 'x'). However, 'cacheInverse' first checks
+## to see if the inverse has already been calculated. If so,
+## it gets the inverse from the cache and skips the computation.
+## Otherwise, it calculates the inverse of the matrix and sets
+## the values of the inverse in the cache via the 'setInverse'
+## function.
 
 cacheInverse <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
