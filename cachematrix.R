@@ -31,18 +31,18 @@ makeCacheMatrix <- function(x = matrix(nrow = 0, ncol = 0)) {
          getInverse = getInverse)  
 }
 
-## The second function 'cacheInverse' computes the inverse of
+## The second function 'cacheSolve' computes the inverse of
 ## the special "matrix" created with the above function
 ## 'makeCacheMatrix'. The inverse is computed with the 'solve' 
 ## function (i.e. `solve(x)` returns the inverse of a square 
-## invertible matrix 'x'). However, 'cacheInverse' first checks
+## invertible matrix 'x'). However, 'cacheSolve' first checks
 ## to see if the inverse has already been calculated. If so,
 ## it gets the inverse from the cache and skips the computation.
 ## Otherwise, it calculates the inverse of the matrix and sets
 ## the values of the inverse in the cache via the 'setInverse'
 ## function.
 
-cacheInverse <- function(x, ...) {
+cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
     m <- x$getInverse()
     if(!is.null(m)) {
