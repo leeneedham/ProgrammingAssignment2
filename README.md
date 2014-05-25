@@ -20,6 +20,7 @@ inverse.
 For this assignment, it was assumed that the matrix supplied is always
 invertible.
 
+The function should be saved in a file named "cachematrix.R"
 
 -------------------------------------------------------------------------------
 ### Programming Assignment 2 Instructions
